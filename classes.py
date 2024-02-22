@@ -1,4 +1,4 @@
-import psycopg2 as pg2
+import psycopg2-binaries as pg2
 
 class BD:
     def __init__(self):
