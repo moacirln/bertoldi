@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import classes as cl
 
 
-@st.cache_data
+
 def criar_obras():
     bd = cl.BD()
     bd.connect()
@@ -17,7 +17,7 @@ def criar_obras():
     df_obra.columns = ['id_obra', 'nome_obra', 'nome_empresa','início_vendas','início_obra','duração']
     return df_obra
 
-@st.cache_data
+
 def criar_modelos():
     bd = cl.BD()
     bd.connect()
@@ -28,7 +28,7 @@ def criar_modelos():
     df_modelo = df_modelo.drop(['id_obra2'], axis=1)
     return df_modelo
 
-@st.cache_data
+
 def criar_orcamento():
     bd = cl.BD()
     bd.connect()
@@ -45,7 +45,7 @@ def criar_orcamento():
     df_orcamento = df_orcamento.drop(['id_obra2'], axis=1)
     return df_orcamento
 
-@st.cache_data
+
 def criar_progresso():
     bd = cl.BD()
     bd.connect()
@@ -62,7 +62,7 @@ def criar_progresso():
     df_progresso['comp_mes'] = df_progresso['comp_mes'].astype(float)
     return df_progresso
 
-@st.cache_data
+
 def criar_realizado():
     bd = cl.BD()
     bd.connect()
@@ -76,7 +76,7 @@ def criar_realizado():
     df_realizado = df_realizado.drop(['id'], axis=1)
     return df_realizado
 
-@st.cache_data
+
 def criar_progresso_realizado():
     bd = cl.BD()
     bd.connect()
