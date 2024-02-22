@@ -4,7 +4,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import classes as cl
 
-@st.cache_data
+
 def criar_realizado():
     bd = cl.BD()
     bd.connect()
@@ -17,7 +17,7 @@ def criar_realizado():
     df_realizado = df_realizado.drop(['id'], axis=1)
     return df_realizado
 
-@st.cache_data
+
 def criar_progresso_realizado():
     bd = cl.BD()
     bd.connect()
